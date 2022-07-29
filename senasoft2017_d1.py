@@ -22,6 +22,11 @@ def ordenar(vector):
 while True:
 	N = int(input("Ingrese el numero de elementos: ")) #15 elementos 0 - 14
 	if N > 0 and N < 15:
+		# N = 3 v1 = [0,0,0]
+		# N = 3 v2 = [0,0,0]
+		for x in range(N):
+			v1.append(0)
+			v2.append(0)
 		break
 	else: #fuera del rango del indice de los arreglos
 		continue   
@@ -30,7 +35,8 @@ while True:
 while True:
 	num = int(input("Ingrese el numero: V1["+ str(i) + "]: " )) # numeros enteros entre 1 y 30 
 	if num >=1 and num <=30:
-		v1.append(num)
+		v1[i] = num
+		#v1.append(num)
 		i += 1 
 		if i == N:
 			i = 0
@@ -40,7 +46,8 @@ print("------------")
 while True:
 	num = int(input("Ingrese el numero: V2["+ str(i) + "]: " )) # numeros enteros entre 1 y 30 
 	if num >=1 and num <=30:
-		v2.append(num)
+		v2[i] = num
+		#v2.append(num)
 		i += 1 
 		if i == N:
 			i = 0
