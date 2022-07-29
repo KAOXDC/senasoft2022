@@ -7,6 +7,18 @@ i = 0 # indice de los vectores
 
 ## CAMBIAR LISTA A VECTOR
 
+# funcion ordenar vector 
+def ordenar(vector):
+	for i in range(1,len(vector)):
+		for j in range(0,len(vector)-i):
+			if(vector[j+1] < vector[j]):
+				aux=vector[j]
+				vector[j]=vector[j+1]
+				vector[j+1]=aux
+	return vector
+
+
+
 while True:
 	N = int(input("Ingrese el numero de elementos: ")) #15 elementos 0 - 14
 	if N > 0 and N < 15:
@@ -36,21 +48,9 @@ while True:
 
 # # metodo de burbuja
 # ordenar el vector v1
-for i in range(1,len(v1)):
-	for j in range(0,len(v1)-i):
-		if(v1[j+1] < v1[j]):
-			aux=v1[j]
-			v1[j]=v1[j+1]
-			v1[j+1]=aux
-
-
+v1 = ordenar(v1)
 # ordenar el vector v2
-for i in range(1,len(v2)):
-	for j in range(0,len(v2)-i):
-		if(v2[j+1] < v2[j]):
-			aux=v2[j]
-			v2[j]=v2[j+1]
-			v2[j+1]=aux
+v2 = ordenar(v2)
 
 print("------------")
 print (v1)
@@ -68,18 +68,15 @@ for k in range(len(v1)):
 # v2 = [-5, 4, 12, 16, 100 ]
 
 # v3 = [4, 5, 6, 7, 10, -5, 4, 12, 16, 100 ]
+
+# Vector 3 para concatenar los vectores v1 y v2
 v3 = v1
 for i in range(len(v1)):
 	v3.append(v2[i])
-
-print (v3)		
+print ("Vector 3 Concatenado: ", v3)
 
 # ordenar el vector v3
-for i in range(1,len(v3)):
-	for j in range(0,len(v3)-i):
-		if(v3[j+1] < v3[j]):
-			aux=v3[j]
-			v3[j]=v3[j+1]
-			v3[j+1]=aux
-
-print (v3)
+v3 = ordenar(v3)
+# print ("Vector 3 ordenado: ", v3)
+for i in v3:
+	print (i, end=", ")
