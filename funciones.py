@@ -3,20 +3,20 @@
 # x = "Hola a todos"
 # print(x.capitalize())
 
-# def hablar(mensaje):
-#     print(mensaje)
+def hablar(mensaje):
+    print(mensaje)
 
-# def saludar(nombre):
-#     print("Hola " + nombre)
-#     hablar("hola")
+def saludar(nombre):
+    print("Hola " + nombre)
+    hablar("hola")
 
-# def despedir(nombre):
-#     print("Adiós " + nombre)
+def despedir(nombre):
+    print("Adiós " + nombre)
 
 
-# saludar("Juan")
-# # hablar("Hola que tal estás?")
-# despedir("Juan")
+saludar("Juan")
+# hablar("Hola que tal estás?")
+despedir("Juan")
 
 # m1 = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
 # m2 = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
